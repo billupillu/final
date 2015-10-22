@@ -1,0 +1,18 @@
+<ul class="select">
+
+  <%@tasks.each do |list| %>
+
+    <li class="city-item noselect"><%=list.name%></li>
+
+  <%end%>
+
+</ul>
+<%=javascript_tag do%>
+
+	$(".city-item").click(function(){
+		var bal = $(this).text();
+       $('.city-input').val(bal);
+       $('.select').slideUp(300);
+	});
+
+<%end%>

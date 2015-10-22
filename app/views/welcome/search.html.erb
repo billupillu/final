@@ -1,0 +1,105 @@
+
+<div id="tilu">
+<%=render 'header'%>
+</div>
+
+<div class="search-results">
+<%@priests.each do |priest|%>
+
+	<div class="search-result">
+
+		<div class="result-image">
+			<%if !priest.icon.blank?%>
+			<%=image_tag priest.icon(:thumb),class: "thumb-img thumbnail"%>
+			<%else%>
+			<%=image_tag('default.png',class: "thumb-img thumbnail")%>
+			<%end%>
+		</div>	
+
+			<!-- =============   Search (Priest Name)  ============= -->
+		<div class="name-div">
+			<h2 class="name"><u><%=priest.name%></u></h2>
+			<h4>(<%=params['religion']%> Priest)</h4>
+		</div>
+
+
+		<!-- =============   Search (Priest Areas)  ============= -->
+		<p class="result-areas"><strong style="height:40px;">Circle: </strong>
+			<%ar=priest.areas.last%><%arct=0%>
+			<%priest.areas.each do |a|%>
+				<%=a.name%><%if a==ar%><%else%><%if arct==3%>,<br /><%else%>, <%end%><%arct+=1%><%end%>
+			<%end%>
+			<span class="glyphicon glyphicon-map-marker"></span>
+		</p>
+
+
+		<!-- =============   Search (Priest Brief)  ============= -->
+		<p class="result-brief"><strong>Info: </strong><%=truncate(priest.brief,length: 150)%></p>
+
+
+		<!-- =============   Search (Priest Last Div)  ============= -->
+		<div class="result-view-and-phone">
+		<a href="/priest_profiles/<%=priest.id%>" class="a">
+			<div class="result-view">
+			
+			
+				<p class="result-view-href">
+					<span class="glyphicon glyphicon-search"></span> View Profile
+				</p>
+			
+			</div></a>
+
+		<div id="main<%=priest.id%>" class="result-phone" >
+			
+	
+			<h3 style="position:absolute;margin-left:54px;margin-top:2px;" id="view<%=priest.id%>">
+					View Number
+			</h3>
+<!--______ Phone if ______-->
+
+<%if user_signed_in? %>
+
+			<h3 id="result<%=priest.id%>" class="result-phone-text">
+			
+				
+					<span class="glyphicon glyphicon-phone-alt" style="color:#3C3C3C;">
+					</span>
+					+91-<%=number_to_phone(priest.phone_wrk)%>
+				
+			</h3>
+
+<%else%>
+			<%=link_to new_user_session_path, class: "get-logged-in" do%>
+			<h4 id="result<%=priest.id%>" class="result-phone-text" style="margin-top:-3px;">
+				Please Sign In to view number! 
+			</h4>
+			<%end%>
+
+<%end%>
+
+
+<!--______ Phone if END______-->	
+		</div>
+
+		</div>
+
+	</div>
+
+	<%=javascript_tag do %>
+	$('.not-sign-in').hide();
+	$("#main<%=priest.id%>").bind("click",function(){$("#view<%=priest.id%>").fadeOut(333,function(){$("#result<%=priest.id%>").fadeIn(333);});});
+	<%end%>
+<%end%>
+
+
+</div>
+
+<%=render 'footer'%>
+
+
+
+
+
+<%=javascript_tag do%>
+
+<%end%>

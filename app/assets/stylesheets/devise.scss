@@ -1,0 +1,71 @@
+.sign-in-container{width:100vw;height: 100vh;background-color: #333333;text-align: center;}
+
+.devise-title{width: 26%;margin-top: 3%;}
+.devise-heading{color:#AB9CAB;letter-spacing: 3px;text-shadow:0 0 2px $pul; }
+
+.devise-email{
+	width: 20%;
+	height: 40px;
+	border-radius: 5px;
+	box-shadow: none;
+	border: none; 
+	background-color: $w;
+	font-size: 18px;
+}
+.valid{box-shadow: 1px 1px 10px #5FCF80,0 0 10px #5FCF80,0 0 20px #5FCF80,0 0 30px #5FCF80;background-color: $w;}
+.invalid{box-shadow: 1px 1px 10px #E15258,0 0 10px #E15258,0 0 20px #E15258,0 0 30px #E15258;background-color: $w;}
+
+.devise-btn{
+	color: $w;
+	letter-spacing: 3px;
+	width:8%;
+	height: 40px;
+	border-radius: 5px;
+	background-color: #FF8EB4;
+	border-color:#FF8EB4; 
+	transition:all 0.3s linear;
+}
+.devise-btn:hover{background-color: #CC7290;}
+
+.devise-btn-sign-up{
+	color: $w;
+	letter-spacing: 3px;
+	width:8%;
+	height: 40px;
+	border-radius: 5px;
+	background-color: #39ADD1;
+	border-color:#39ADD1; 
+	transition:all 0.3s linear;
+}
+.devise-btn-sign-up:hover{background-color: #74C6DF;}
+
+.arrow{width: 140px;position: absolute;margin-top: -18%;margin-left: 20%;}
+.arrow2{width: 140px;position: absolute;margin-top: -22%;margin-left: 24%;}
+.devise-sign-up{color: $w;position: absolute;margin-left: 68%;margin-top: -25%;font-family: symbol;}
+.sign-in-up{background-color: #39ADD1;
+			transition:all 0.3s linear;
+			width: 31%;
+			height: 40px;
+			display: inline-block;
+			color: $w;
+			letter-spacing: 3px;
+			padding-top: 9px;
+			border-radius: 5px;
+			}
+.sign-in-up:hover{color: $w;text-decoration: none;background-color: #74C6DF;}	
+
+.sign-up-in{background-color: #FF8EB4;
+			transition:all 0.3s linear;
+			width: 31%;
+			height: 40px;
+			display: inline-block;
+			color: $w;
+			letter-spacing: 3px;
+			padding-top: 9px;
+			border-radius: 5px;
+			}
+.sign-up-in:hover{color: $w;text-decoration: none;background-color: #CC7290;}		
+.devise-sign-in{color: $w;position: absolute;margin-left: 70%;margin-top: -29%;font-family: symbol;}
+
+#error-empty{position: absolute;color:$r;margin-left: 57vw;margin-top: -5vh;font-size:17px;
+text-shadow:0 0 1px #E15258; }

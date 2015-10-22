@@ -1,0 +1,48 @@
+<div class="sign-in-container">
+<%=image_tag 'titleLightGrey.svg', class: "devise-title"%>
+<h2 class="devise-heading">Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <br />
+    <%= f.text_field :name, autofocus: true,placeholder: " Name (eg: John)",class: "devise-email" %>
+  </div>
+  <div class="field">
+    <br />
+    <%= f.email_field :email,placeholder: "(eg: someone@example.com)",class: "devise-email"%>
+  </div>
+
+  <div class="field" style="margin-left:89px;width:100%;">
+   <br /> 
+   <p> 
+   <%= f.password_field :password, autocomplete: "off",placeholder: " Enter Password",class: "devise-email" %>
+      <p1 style="color:white;margin-left:2%;"> <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %></p1>
+    </p>
+
+  </div>
+
+
+  <div class="field">
+    <br />
+    <%= f.password_field :password_confirmation, autocomplete: "off",placeholder: " Confirm Password",class: "devise-email" %><p1 style="margin-left:2%;margin-right:-126px;" id="pw-conf" class="noselect">password match</p1>
+  </div>
+<br/>
+  <div class="actions">
+    <%= f.submit "Sign up",class: "devise-btn-sign-up" %>
+  </div>
+<% end %>
+
+<%=image_tag 'arrow.svg',class: "arrow2"%>
+
+  <div class="devise-sign-in">
+    <h3>already have an account..?</h3>
+      <%= link_to new_user_session_path do%>
+    <div class="sign-up-in">Sign In</div><%end%>
+
+  </div>
+<p id="error-empty">*all fields are manditory</p>
+</div>

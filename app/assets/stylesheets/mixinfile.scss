@@ -1,0 +1,97 @@
+@mixin noselect(){-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@mixin trans(){transition: all 0.4s linear;}
+
+@mixin bunhover(){box-shadow: 0 0 13px #00A78B;cursor:hand;cursor: pointer;color:#ffffff;background-color: #333333;}
+
+@mixin bannerbun($bunl:1px,$bunt:1px){
+	width:140px;
+	height: 48px;
+	letter-spacing: 5px;
+	text-align: center;
+	border:1px solid #00A78B;
+	color:#00A78B;
+	transition:all 0.4s linear;
+	border-radius: 4px; 
+	margin-left: $bunl;
+	margin-top: $bunt;
+	font-size: 23px;
+	padding-top: 1px;
+	text-decoration: none;
+	background-color: none;
+	background:none;
+}
+
+@mixin bannertext(){
+	text-align: center;
+	text-shadow:4px 4px 8px #848FC1;
+	font-family:helvetica;
+	margin-top:7%;line-height: 1.8em;
+	color:#ffffff;text-align:center;
+	letter-spacing:5px;font-size:34px;
+}
+
+@mixin placeholder($marginleft:30px,$margintop:20px){
+	position: absolute;
+	margin-left: $marginleft;
+	margin-top: $margintop;
+	letter-spacing: 4px;
+	color: #9C9E9D;
+	font-size: 23px;
+}
+
+@mixin searchbar($barleft:20px,$bartop:20px,$barwidth:300px,$barheight:44px){
+	width:$barwidth;
+	height: $barheight;
+	margin-left: $barleft;
+	margin-top: $bartop;
+	margin-right: 17px;
+	color: #ffffff;
+	background: none;
+	border:thin;
+	box-shadow: none;
+	border: 1px solid #00A78B;
+    border-radius: 3px;
+    letter-spacing: 6px;
+	font-size: 25px;
+	padding-left: 10px;
+	input:focus{outline: none !important;}
+}
+
+@mixin selectbox($ml:0px,$mt:0px,$wd:300px){
+	margin-left: $ml;
+	margin-top: $mt;
+	width:$wd;
+	height: 240px;
+    font-size: 23px;
+	letter-spacing: 4px;
+	color:#00A78B;
+	border:1px solid #00A78B;
+	border-radius: 4px;
+	box-shadow: 0 0 4px #00A78B;
+	text-align: center;
+	position: absolute;
+	padding-left:0px;
+	list-style: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+ }
+
+@mixin selectboxitems(){transition:all 0.3s linear;
+line-height: 2.1em;
+list-style: none;
+text-decoration: none;
+padding-left: 0px;
+transition:all 0.3s linear;
+}
+@mixin selectboxitemhover(){background-color: #333333;
+cursor: pointer;cursor: hand;
+list-style: none;
+text-decoration: none;
+color: #ffffff;
+}
+
+

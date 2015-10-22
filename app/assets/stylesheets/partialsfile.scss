@@ -1,0 +1,8 @@
+/*_________Header_________*/
+$h:8px;$s:17px;
+@mixin hdito(){margin-top: $h;font-size: $s;letter-spacing: 3px;position: absolute;text-decoration: none;}
+.title{width:246px;}
+.login{@include hdito(); color:$lb;@include trans();}
+.signup{@include hdito();color:$gr;@include trans();}
+.logout{@include hdito();color:$r;@include trans();}
+/*------------------------*/

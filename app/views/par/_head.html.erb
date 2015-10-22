@@ -1,0 +1,53 @@
+
+<div id="header">
+	<h3 id="header-line">
+		<%=link_to root_path,class: "head-link" do%>
+			<div class="up-down" id="home">
+				<i class="fa fa-home"></i><br />
+				Home
+			</div>
+		<%end%>
+
+		<%=link_to '/priest_profiles/new',class: "head-link" do%>
+			<div class="up-down" id="joinus">
+				<i class="fa fa-link"></i><br />
+				Join Us
+			</div>
+		<%end%>
+
+		<%if user_signed_in?%>
+			
+			<div class="up-down" id="welcome">
+				Welcome.. <strong style="color:#0091ea;"> <%=current_user.name%></strong>
+			</div>
+
+			<%=link_to destroy_user_session_path,method: 'delete',class: "head-link" do%>
+				<div class="up-down" id="logout">
+					<i class="fa fa-sign-out"></i><br />
+					Sign Out
+				</div>
+			<%end%>
+		
+		<%else%>
+			<%=link_to new_user_session_path,class: "head-link" do%>
+				<div class="up-down" id="login">
+					<i class="fa fa-sign-in"></i><br />
+					Sign In
+				</div>
+			<%end%>
+
+			<%=link_to new_user_registration_path,class: "head-link" do%>
+				<div class="up-down" id="logup">
+					<i class="fa fa-user"></i><br />
+					Sign Up
+				</div>
+			<%end%>
+
+		<%end%>
+
+		
+	</h3>	
+</div>
+<%=image_tag 'titleLightGrey.svg',id: "header-title"%>
+
+

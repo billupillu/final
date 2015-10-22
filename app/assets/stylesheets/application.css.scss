@@ -1,0 +1,127 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require chosen
+ */
+ 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
+ @import "colorfile";
+ @import "mixinfile";
+ @import "welcome";
+ @import "welcome_result";
+ @import "devise";
+ @import "index_parallax";
+
+body{/*font-family: 'Nunito',sans-serif;*/overflow-x: hidden;
+    overflow-y: scroll; }
+.noselect {@include noselect();}
+
+
+ /*
+		    /*//*/***************************************
+			*******//*/**********************************
+			**********       *********      *************
+			********    ***  *********  *****  **********
+			*******  *****************  *****  **********
+			*******  *****************  *****  **********
+			*******  *****************  *****  **********
+			********    ***  *********  ****  ***********
+			**********       ***  ****      ******//*/***
+			*********************************************
+			******** © CodeDis - Sumeet(Lead dev) *//*/**
+			*********************************************
+*/
+
+
+/*=================PARTIALS==================*/
+ @import "partialsfile";
+ /*==============FOOTER===========*/
+ @import "foot";
+/*===========================================*/
+
+/*============== BANNER ==================*/
+.banner-text{@include bannertext();}
+.bun{@include bannerbun();}
+.bun:hover{@include bunhover();}
+.s2{@include bannerbun();}.s2:hover{@include bunhover();}
+
+.city-placehold{@include placeholder(480px,38px);}
+.area-placeholder{@include placeholder(12px,38px);}
+.religion-placeholder{@include placeholder(320px,-38px);}
+.occasion-placeholder{@include placeholder(620px,-38px);}
+
+.city-input{@include searchbar(0px,30px,300px,47px);}
+.area-input{@include searchbar(0px,30px,280px,47px);}
+.religion-input{@include searchbar(0px,30px,280px,47px);}
+.occasion-input{@include searchbar(0px,30px,280px,47px);}
+
+.tilu{text-align: center;}
+.kilu{text-align: center;}.foo{display: inline-block;}
+.select{@include selectbox(460px);}
+.area-select{@include selectbox(0px,0,280px);}
+.religion-select{@include selectbox(301px,0,280px);}
+.occasion-select{@include selectbox(601px,0,280px);}
+
+.city-item{@include selectboxitems();}
+.city-item:hover{@include selectboxitemhover();}
+.area-item{@include selectboxitems();}
+.area-item:hover{@include selectboxitemhover();}
+.religion-item{@include selectboxitems();}
+.religion-item:hover{@include selectboxitemhover();}
+.occasion-item{@include selectboxitems();}
+.occasion-item:hover{@include selectboxitemhover();}
+
+/*========================================*/
+
+::-webkit-scrollbar {
+      width: 10px;
+} /* this targets the default scrollbar (compulsory) */
+::-webkit-scrollbar-track {
+      background-color: none;border-left: 1px solid $mg;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: $mg; border-radius: 10px;
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: $mg;border-radius: 4px;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: $w;
+}
+
+
+
+
+
+/*=/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/=*/
+
+/*#vid-mask{position: absolute;width:800px;height: 450px;background-color:#3a143c;
+opacity: 0.5;z-index: 100;margin-top: 75px;margin-left: 47px;transition:all 0.4s linear; }*/
+	
+	#text-mask{position: absolute;margin-top: 18%;margin-left: 19%;transition:all 0.4s linear;}
+	.mask-text{color: $w;line-height: 1.8em;font-weight: bold;font-size: 46px;text-shadow:0 0 5px #E15258,-0 -0 10px #E15258,-0 -0 15px #39ADD1;}
+/*	#vid-mask:hover{cursor: pointer; cursor: hand;}*/
+
+	/*iframe{width: 780px;height: 480px;display: inline-block;}*/
+	.sign-out{color:#E15258;text-decoration: none;transition:all 0.4s linear;}
+	.sign-out:hover{color: #9E393E;text-decoration: none;}
+	.sign-in{color:#00A78B;text-decoration: none;transition:all 0.4s linear;}
+	.sign-in:hover{color:#5FCF80;text-decoration: none;}
+
+	.sign-up{color:#39ADD1;text-decoration: none;transition:all 0.4s linear;}
+	.sign-up:hover{color: #447A92;text-decoration: none;}

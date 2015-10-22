@@ -1,0 +1,37 @@
+<%=form_tag({controller: "welcome", action: "live_search"}, method: "get", id: "live-search-form",remote: true) do%>
+
+	<p class="city-placehold noselect">Enter City</p> 
+
+	<input type="text" name="name" class="city-input" id="big-search-box" autocomplete="off" >
+
+	<%=submit_tag('Search',class: "bun noselect",id: "s1")%>
+			
+<%end%>	
+
+<div id="live-search-results">
+
+
+
+</div>
+
+<%=javascript_tag do%>
+
+$("#big-search-box").bind("keyup", function() {
+ 
+  var form = $("#live-search-form"); // grab the form wrapping the search bar.
+
+  var url = "/welcome/live_search"; // live_search action.   
+  var formData = form.serialize(); // grab the data in the form   
+  $.get(url, formData, function(html) { // perform an AJAX get
+
+    $("#live-search-results").html(html); // replace the "results" div with the results
+
+  });
+
+});
+$('#s1').bind("click",function(){
+  $('#live-search-form').attr("action", "/welcome/getarea");
+});
+
+
+<%end%>

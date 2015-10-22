@@ -1,0 +1,37 @@
+
+<ul class="area-select">
+
+	<%@areaz.each do |area| %>
+		<li class="area-item noselect"  ><%=area.name%></li>
+
+	<%end%>
+</ul>
+
+<%=javascript_tag do%>
+getSetValue("area-item","area-input","area-select");
+
+
+$('#big-search-box2').keyup(function(){
+   var valThis = $(this).val().toLowerCase();
+    if(valThis == ""){
+        $('.area-select > li').show();           
+    } else {
+        $('.area-select > li').each(function(){
+            var text = $(this).text().toLowerCase();
+            (text.indexOf(valThis) >= 0) ? $(this).show() : $(this).hide();
+        });
+   };
+});
+
+function getSetValue(ic,inc,sc){
+	$("."+ic).click(function(){
+	
+		var bal = $(this).text();
+		$("."+inc).val(bal);
+		$("."+sc).slideUp(300);
+
+	});
+}
+
+
+<%end%>

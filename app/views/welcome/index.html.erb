@@ -1,0 +1,143 @@
+<%=render 'par/head'%>
+
+<div class="row" style="width:1381px;background-image:url(<%=asset_path 'back2.jpg'%>);background-attachment:fixed;height:700px;box-shadow: 0 12px 8px -8px #dfdddf;">
+	<p class="banner-text" style="margin-top:150px;" >
+		Find a Priest just select your city, area and religion<br /> 
+		to filter down the results.
+	</p>
+
+	<div class="search-form">
+		<div class="tilu">
+			<%=render 'par1'%>
+		</div>
+	</div>
+</div>
+
+<section class="embed-responsive" style="height:700px;background-color:#3c3c3c;">
+  <video controls="controls" id ="vid" class="embed-responsive-item" src="/assets/testimonial-85745dc2b6fd0794a93627807403a14c.mp4"></video>
+  <i class="fa fa-play fa-5x" id="play-pause" style="font-size:140px"></i>
+  <h1 id="play-pause-text">See what Nikita has to <br />say about Pandi Ji..</h1>
+</section>
+
+
+<!--======= Map Row =======-->
+<section id="map-row" data-type="background" data-speed="10"> 
+
+	<article id="map-row-article">
+		<h1>Get filtered results as per your location</h1>
+		<h3>
+			There is option to change your location as <br />well just in case you have to look for <br />a different place.
+				<span class="glyphicon glyphicon-map-marker"></span>
+		</h3>
+		<br /><%=link_to '#', class: "white-btn-lnk noselect" do%><div class="white-btn">Location Search</div><%end%>
+	</article>
+</section>
+
+<!--============= Wedding Planner Row ==================-->
+<section id="wedding-planner" data-type="background" data-speed="10"> 
+
+	<article id="wedding-planner-article">
+		<h1>Plan a hastle free wedding</h1>
+		<h3 >
+			Spend more time with your family, <br />relatives and friends instead of worring about<br /> the arrangements... leave that to us.<span class="glyphicon glyphicon-heart-empty"></span>
+		</h3>
+		<br /><%=link_to '#', class: "white-btn-lnk noselect" do%><div class="white-btn">Wedding Planner</div><%end%>
+	</article>
+</section>
+
+<!--============= Catering Row ==================-->
+<section id="catering-row" data-type="background" data-speed="10"> 
+
+	<article id="catering-row-article">
+		<h1>Book Vendors for Catering, Tent, Banquet..</h1>
+		<h3 >
+			You can book indoor/outdoor Banquets, <br />Quality food, service and more,<br />small ceremony or wedding we are ready for all. <span class="glyphicon glyphicon-thumbs-up"></span>
+		</h3>
+		<br /><%=link_to '#', class: "white-btn-lnk noselect" do%><div class="white-btn">Vendor Section</div><%end%>
+	</article>
+</section>
+
+
+<!-- ============ testimonials ============== -->
+
+<%#=render 'testimonial'%>
+
+<!-- ============= Join Us Row ============== -->
+<section id="joinus-row" data-type="background" data-speed="10"> 
+
+	<article id="joinus-row-article">
+		<h1>Join Us</h1>
+		<h3>
+			Priest, Catering-Vendor, Tent-Vendor, Banquet-Vendor....<br />
+			If you are either of them..!! Come Join Us and get Buisness<br />
+			more frequently 
+			<span class="glyphicon glyphicon-link"></span></h3>
+		</h3>
+		<br /><%=link_to '#', class: "white-btn-lnk noselect" do%><div class="white-btn">Join Us</div><%end%>
+	</article>
+</section>
+
+
+
+<!--============== Footer row ====================-->
+<section id="footer-row" data-type="background" data-speed="10"> 
+
+	<article id="footer-row-article">
+		<%=image_tag 'titleBlueGrey.svg',id: "f-title"%><br/>
+		<p>	<%=image_tag 'codedis_logo.png',id: "f-logo"%><p1 id="cp">
+			 <i class="fa fa-copyright"></i>
+			  2015 <a href="http://www.codedis.com" style="color:#F9D056">CodeDis</a> CO. LTD</p1>
+			  <br/><br/>
+			  Get all at one place Preists,Wedding-Banquets,Tent vendors,<br/> Catering and more+.. 
+		</p>
+
+		<div id="f-in">
+			<p>Enter email for news and updates</p>
+			<input type="text" name="news" placeholder=" name@example.com">
+			<div>GO</div>
+		</div>
+
+		<div id="f-social">
+			<div>
+				<a href="https://twitter.com/codedis213">
+					<i class="fa fa-twitter fa-3x"></i>
+				</a>
+			</div>
+
+			<div>
+				<a href="https://www.facebook.com/codediss">
+					<i class="fa fa-facebook fa-3x"></i>
+				</a>
+			</div>
+
+			<div>
+				<a href="https://github.com/codedis213">
+					<i class="fa fa-github fa-3x"></i>
+				</a>
+			</div>
+			
+		</div>
+
+		<p id="f-menu">
+			<%=link_to 'Home',root_path%> <p1>|</p1> 
+			<%=link_to 'Join Us','/priest_profiles/new'%> <p1>|</p1> 
+			<a href="#">Contact Us</a> <p1>|</p1> 
+			<a href="#">About</a> <p1>|</p1> 
+			<a href="#">Sisters</a>
+		</p>
+	</article>
+</section>
+<%#=render 'welcome/footer'%>
+<%=javascript_tag do%>
+lol("vid");
+lol("play-pause");
+
+function lol(a){$("#"+a+"").click(function(){if($('#vid').get(0).paused){$('#vid').get(0).play();$('#play-pause-text').fadeOut(444,function(){$('#play-pause').removeClass("fa-play").addClass("fa-pause").css({"margin-left": "80vw","color":"#E15258"});});}
+else{$('#vid').get(0).pause();$('#play-pause-text').fadeIn(444,function(){
+$('#play-pause').removeClass("fa-pause").addClass("fa-play").
+css({"margin-left": "49vw","color":"#00A78B"});});}});}/*window*/$(window).scroll(function(){	var k = $(this).scrollTop();/*slide-up*/rofl(212,"vid");rofl(859,"map-row");
+rofl(1612,"wedding-planner");rofl(2771,"catering-row");rofl(3771,"joinus-row");rofl(4771,"footer-row");/*slide-down*/rofl(4931,"joinus-row");rofl(4347,"catering-row");rofl(3294,"wedding-planner");rofl(2347,"map-row");rofl(1347,"vid");/*rofl(658,"header");*/if(k==647){$('html, body').animate({scrollTop: 0}, 1000);}/*BITCHES*/function rofl(x,y){if(k==x){$('html, body').animate({scrollTop: $("#"+y+"").offset().top}, 1000);}}});
+
+<%end%>
+
+

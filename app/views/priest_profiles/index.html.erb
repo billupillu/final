@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Priest Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone wrk</th>
+      <th>Phone pr</th>
+      <th>Religion</th>
+      <th>Icon</th>
+      <th>Brief</th>
+      <th>Description</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @priest_profiles.each do |priest_profile| %>
+      <tr>
+        <td><%= priest_profile.name %></td>
+        <td><%= priest_profile.phone_wrk %></td>
+        <td><%= priest_profile.phone_pr %></td>
+        <td><%= priest_profile.religion %></td>
+        <td><%= priest_profile.icon %></td>
+        <td><%= priest_profile.brief %></td>
+        <td><%= priest_profile.description %></td>
+
+        <td><%= link_to 'Show', priest_profile %></td>
+        <td><%= link_to 'Edit', edit_priest_profile_path(priest_profile) %></td>
+        <td><%= link_to 'Destroy', priest_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Priest profile', new_priest_profile_path %>

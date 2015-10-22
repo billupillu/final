@@ -1,0 +1,83 @@
+<div class="kilu"><div class="foo">
+
+	<form action="/welcome/search" method="get" > 
+			<p class="area-placeholder noselect"
+			 style="margin-top:39px;">Enter Area</p> 
+		<input type="text" name="area" class="area-input" id="big-search-box2" autocomplete="off" >
+
+			<p class="religion-placeholder noselect">Select Religion</p> 
+		<input type="text" name="religion" class="religion-input" autocomplete="off" >
+
+			<p class="occasion-placeholder noselect">Select Occasion</p>
+		<input type="text" name="occasion" class="occasion-input" autocomplete="off" >
+
+		<input type="submit" name="commit" value="Priests" class="s2 noselect">
+	</form> 
+<%=render 'live_search2'%>
+
+
+<ul class="religion-select">
+	<li class="religion-item noselect">Hindu</li><li class="religion-item noselect">Muslim</li>
+	<li class="religion-item noselect">Sikh</li><li class="religion-item noselect">Christian</li>
+	<li class="religion-item noselect">Buddhist</li><li class="religion-item noselect">Zoroastrin</li>
+</ul>
+<ul class="occasion-select">
+	<li class="occasion-item noselect">Small Ceremony</li><li class="occasion-item noselect">Wedding</li>
+</ul>
+
+</div></div>
+
+<%=javascript_tag do%>
+$('.foo').hide();
+$('.area-select').hide();$('.religion-select').hide();$('.occasion-select').hide();
+animatePlaceholder("area-input","area-placeholder","12","0","area-select", "area-input");
+animatePlaceholder("area-placeholder","area-placeholder","12","0","area-select", "area-input");
+
+animatePlaceholder("religion-input","religion-placeholder","90","301","religion-select","religion-input");
+animatePlaceholder("religion-placeholder","religion-placeholder","90","301","religion-select","religion-input");
+
+animatePlaceholder("occasion-input","occasion-placeholder","88","601","occasion-select", "occasion-input");
+animatePlaceholder("occasion-placeholder","occasion-placeholder","88","601","occasion-select", "occasion-input");
+
+getSetValue("religion-item","religion-input","religion-select");
+getSetValue("occasion-item","occasion-input","occasion-select");
+
+
+function animatePlaceholder(cl,mv,t,l,select,getfocus){
+	$("."+cl).bind("click", function(){
+		$("."+mv).animate({"margin-top":"-"+t+"px"},90,function(){
+			$("."+mv).animate({"margin-left":""+l+"px"},120,function(){
+				$("."+mv).css({"color":"#00A78B"});
+				$("."+select).slideToggle(300);
+				$("."+getfocus).focus();
+			});
+		});
+	});
+}
+
+function getSetValue(ic,inc,sc){
+	$("."+ic).click(function(){
+	
+		var bal = $(this).text();
+		$("."+inc).val(bal);
+		$("."+sc).slideUp(300);
+
+	});
+}
+
+$('.religion-input').keyup(function(){
+   var valThis = $(this).val().toLowerCase();
+    if(valThis == ""){
+        $('.religion-select > li').show();           
+    } else {
+        $('.religion-select > li').each(function(){
+            var text = $(this).text().toLowerCase();
+            (text.indexOf(valThis) >= 0) ? $(this).show() : $(this).hide();
+        });
+   };
+});
+
+<%end%>
+
+
+

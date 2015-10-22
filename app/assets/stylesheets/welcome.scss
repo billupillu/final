@@ -1,0 +1,263 @@
+.mapI{float:left;
+	
+	.compimg{
+		.comp_png{width:540px;}
+	}
+}
+
+.mapT{
+	
+	padding-top: 6%;
+	float: right;
+	margin-right: 6%;
+
+	.mapTB{
+	background-color: #08536F;
+	width:150px;
+	height:40px;
+	transition:all 0.4s linear;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
+	border-radius: 3px;
+	margin-top: 4%;
+	color: #ffffff;
+	box-shadow:1px 1px 0 #9AD2D9,1px 1px 2px #9AD2D9;
+	text-decoration: none;
+
+}
+.mapTB:hover{color:#08536F;
+	background-color: #ffffff;
+	text-decoration: none;
+	cursor: pointer; cursor: hand;
+    box-shadow:2px 2px 10px #08536F inset,-2px -2px 10px #08536F inset;
+  }	
+
+
+
+}
+
+.wt{
+		padding-top: 10%;
+		padding-left: 15%;
+
+		.wTB{
+	background-color: #9C9E9D;
+	width:150px;
+	height:40px;
+	transition:all 0.4s linear;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
+	border-radius: 3px;
+	margin-top: 7%;
+	color: #ffffff;
+	box-shadow:1px 1px 0 #9AD2D9,1px 1px 2px #9AD2D9;
+	text-decoration: none;
+
+}
+.wTB:hover{color:#9C9E9D;
+	background-color: #ffffff;
+	text-decoration: none;
+	cursor: pointer; cursor: hand;
+    box-shadow:2px 2px 10px #9C9E9D inset,-2px -2px 10px #9C9E9D inset;
+  }	
+	}
+
+.cw{width:620px;height:410px;}
+
+
+  /*=============Catering================*/
+  
+  .catT{
+		padding-top: 10%;
+		padding-left: 4%;
+
+		.startt{
+	background-color: #6BC2A0;
+	width:150px;
+	height:40px;
+	transition:all 0.4s linear;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 2%;
+	padding-right: 2%;
+	border-radius: 3px;
+	margin-top: 7%;
+	color: #ffffff;
+	box-shadow:1px 1px 0 #9AD2D9,1px 1px 2px #9AD2D9;
+	text-decoration: none;
+
+}
+.startt:hover{color:#6BC2A0;
+	background-color: #ffffff;
+	text-decoration: none;
+	cursor: pointer; cursor: hand;
+    box-shadow:2px 2px 10px #6BC2A0 inset,-2px -2px 10px #6BC2A0 inset;
+  }	
+	}
+.catering{width:600px;height: 330px;}	
+.ti{
+	width:80px;
+	height:80px;
+	margin-right: 1%;
+	margin-bottom: 1%;
+	
+}
+
+.join{
+	background-color: #ffffff;
+	transition:all 0.4s linear;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	border-radius: 3px;
+	color: #848FC1;
+	text-decoration: none;
+	padding-left: 2%;
+	padding-right: 2%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+
+}
+.join:hover{color:#ffffff;
+	background-color: #848FC1;
+	text-decoration: none;
+	cursor: pointer; cursor: hand;
+    box-shadow:3px 3px 14px #ffffff inset,-3px -3px 14px #ffffff inset;
+  }	
+
+  /*=================  SEARCH PAGE CSS =======================*/
+
+  header{
+  	position: relative;
+  	height:400px;
+  	width: 100%;
+  	text-align: center;transition:all 0.3s linear;
+  	background:{ 
+  		color:$dg;
+  		position: top center;
+  		attachment: fixed;transition:all 0.3s linear;}
+
+  }
+
+  #parTitle{width: 650px;
+  	position: absolute;
+  	top:50%;margin-top: -140px;
+  	left:52%;margin-left: -325px;transition:all 0.3s linear;}
+
+  #parSearchCriteria{
+  	text-align: center;
+  	color: $w;
+  	position: absolute;
+  	letter-spacing: 3px;
+  	top: 70%;
+  	text-shadow:0 0 2px $w;
+  	left:50%;margin-left: -375px;
+  	transition:all 0.3s linear;
+  	#parSearchCriteriaText{font-weight: bold;transition:all 0.3s linear;}	  	
+  }
+
+  #parBack{
+  	position: absolute;
+  	background-color: #5c5757;
+  	width: 100%;
+  	height: 60px;
+  	top:85%;
+  	padding-top:10px;
+  	color: $w;
+  	font-size: 24px;
+  	letter-spacing: 4px;
+  	transition:all 0.3s linear;
+   	.btnt{padding-top: 9px;
+   		width: 180px;height: 40px;
+  		background-color: #747272;
+  		border-radius: 3px;
+  		color: $w;
+  		cursor: pointer; cursor: hand;
+  		transition:all 0.3s linear;
+  		#btnLink{color:$w;transition:all 0.3s linear;color:$w;}
+  	}
+
+  }
+  #btnLink:hover{text-decoration: none;color:$w;}
+
+  .parHeader{
+  	height:94px;
+  	background-color: $dg;
+  	width: 100%;
+  	position: fixed;
+  	#parTitle2{width: 278px;
+  	position: absolute;
+  	top:50%;margin-top: -53px;padding-top: 9px;
+  	left:50%;margin-left: -223px;transition:all 0.3s linear;}
+  }
+  .gpa{
+  	text-align: center;
+  	position: absolute;
+  	top:24%;
+  	color: $w;
+  	margin-left: 2%;
+  	border: 2px solid $mg;
+  	border-radius: 3px;
+  	width: 52px;
+  	height: 46px;
+  	transition:all 0.3s linear;
+  }
+  .gpa:hover{color:$mg;border-color: $w;text-decoration: none;}
+
+
+
+.tnt{padding-top: 9px;margin-left:1%;margin-right:-14%;
+   		width: 100px;height: 40px;
+  		background-color: #747272;
+  		border-radius: 3px;
+  		color: $w;
+  		cursor: pointer; cursor: hand;
+  		transition:all 0.3s linear;
+  		#tnLink{color:$w;transition:all 0.3s linear;color:$w;}
+  	}
+
+  
+  #tnLink:hover{text-decoration: none;color:$w;cursor: pointer; cursor: hand;color:$w;}
+  .tnt:hover{text-decoration: none;cursor: pointer; cursor: hand;background-color: $mg;color:$w;}
+
+  .nt{padding-top: 9px;margin-left:14%;margin-right:-14%;
+   		width: 100px;height: 40px;
+  		background-color: #747272;
+  		border-radius: 3px;
+  		color: $w;
+  		cursor: pointer; cursor: hand;
+  		transition:all 0.3s linear;
+  		#nLink{color:$w;transition:all 0.3s linear;color:$w;}
+  	}
+
+  
+  #nLink:hover{text-decoration: none;color:$w;cursor: pointer; cursor: hand;color:$w;}
+  .nt:hover{text-decoration: none;cursor: pointer; cursor: hand;background-color: $mg;color:$w;}
+
+
+    .t{padding-top: 9px;margin-left:0;margin-right:0;
+   		width: 120px;height: 40px;
+  		background-color: #747272;
+  		border-radius: 3px;
+  		color: $w;
+  		cursor: pointer; cursor: hand;
+  		transition:all 0.3s linear;
+  		#tLink{color:$w;transition:all 0.3s linear;color:$w;}
+  	}
+
+  
+  #tLink:hover{text-decoration: none;color:$w;cursor: pointer; cursor: hand;color:$w;}
+  .t:hover{text-decoration: none;cursor: pointer; cursor: hand;background-color: $r;color:$w;}

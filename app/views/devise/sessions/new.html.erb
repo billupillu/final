@@ -1,0 +1,49 @@
+<div class="sign-in-container">
+
+<%=image_tag 'titleBlueGrey.svg', class: "devise-title"%>
+
+
+
+<h2 class="devise-heading">Sign in</h2>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field" >
+    <br />
+    <%= f.email_field :email, autofocus: true,placeholder: "(eg: someone@example.com)",class: "devise-email" %>
+  </div>
+
+  <div class="field">
+    <br />
+    <%= f.password_field :password, autocomplete: "off",placeholder: "(enter password)",class: "devise-email" %>
+  </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field" style="color:white;margin-left:-10%;margin-top:8px;">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit "Log in",class: "devise-btn" %>
+  </div>
+<% end %>
+<br />
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+<% end -%>
+
+<%=image_tag 'arrow.svg',class: "arrow"%>
+<div class="devise-sign-up">
+  <h3>don't have an account..?</h3>
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to new_registration_path(resource_name) do%>
+  <div class="sign-in-up">Sign Up</div><%end%>
+<% end -%>
+
+</div>
+
+</div>
+
+
+

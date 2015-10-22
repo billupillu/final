@@ -1,0 +1,7 @@
+<select name="priest_profile[area_ids][]" id="areas_select" multiple="multiple">
+  <option value=""></option>
+    <%@areas.each do |area|%>
+      <option value="<%=area.id%>"><%=area.name.titleize%></option>
+    <%end%>
+  </select>
+

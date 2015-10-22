@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @priest_profile.name %>
+</p>
+
+<p>
+  <strong>Phone wrk:</strong>
+  <%= @priest_profile.phone_wrk %>
+</p>
+
+<p>
+  <strong>Phone pr:</strong>
+  <%= @priest_profile.phone_pr %>
+</p>
+
+<p>
+  <strong>Religion:</strong>
+  <%= @priest_profile.religion %>
+</p>
+
+<p>
+  <strong>Icon:</strong>
+  <%= image_tag @priest_profile.icon(:medium) %>
+</p>
+
+<p>
+  <strong>Brief:</strong>
+  <%= @priest_profile.brief %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @priest_profile.description %>
+</p>
+
+<strong>Areas:-</strong>
+<ul>
+<%@priest_profile.areas.each do |a|%>
+<li><%=a.name%></li>
+<%end%>
+</ul>
+
+<%= link_to 'Edit', edit_priest_profile_path(@priest_profile) %> |
+<%= link_to 'Back', priest_profiles_path %>

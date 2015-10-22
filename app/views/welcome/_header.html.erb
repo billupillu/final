@@ -1,0 +1,27 @@
+<header>
+	<%=image_tag('title.svg',id: "parTitle")%>
+	<div id="parSearchCriteria">
+		<h2 id="parSearchCriteriaText">You searched for <strong style="color:#00A78B;"><%=params[:religion].to_s%></strong> Priests in <strong style="color:#00A78B;"><%=params[:area].to_s%></strong> area..</h2>
+	</div>
+	<div id="parBack">Did something wrong..?
+
+			<%= link_to root_path,id: "btnLink" do%>
+		 	<div class="btn btnt">Back to Search</div><%end%>
+
+		 <%if user_signed_in? %>
+
+			 	<%= link_to destroy_user_session_path,method: 'delete',id: "tLink" do%>
+		 		<div class="btn t noselect">Sign Out</div><%end%>
+
+		 <%else%>
+
+			 	<%= link_to new_user_session_path,id: "tnLink" do%>
+			 	<div class="btn tnt noselect">Sign In</div><%end%>	
+
+			 	<%= link_to new_user_registration_path,id: "nLink" do%>
+				<div class="btn nt noselect">Sign Up</div><%end%>	
+		<%end%>
+	</div>
+
+	
+</header>
